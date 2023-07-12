@@ -551,7 +551,7 @@ namespace Nursery {
 			var u = this.state.Guild.GetUser(uid);
 			if (u == null) { return ""; }
 			if (u.Nickname != null && u.Nickname.Length > 0) { return u.Nickname; }
-			return u.Username;
+			return u.DisplayName;
 		}
 
 		public string[] GetUserIdsInVoiceChannel() {

@@ -30,7 +30,7 @@ namespace Nursery.BasicPlugins {
 				var user = guild.GetUser(id);
 				if (user == null) { return match.Groups[1].Value + match.Groups[3].Value; }
 				var name = user.Nickname;
-				if (name == null || name.Length == 0) { name = user.Username; }
+				if (name == null || name.Length == 0) { name = user.DisplayName; }
 				// TRANSLATORS: Bot message. MentionFilter plugin. Replacer for "@XXX". {0} is user name. 
 				return match.Groups[1].Value + T._("at {0}", name) + match.Groups[3].Value;
 			});
